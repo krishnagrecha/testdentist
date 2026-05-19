@@ -169,6 +169,91 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
+    .btn-whatsapp-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.25rem;
+      background: #25D366;
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-whatsapp-hero:hover {
+      background: #1fb855;
+      transform: translateY(-1px);
+    }
+    .btn-whatsapp-hero svg { flex-shrink: 0; }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      margin-top: 1.25rem;
+      padding: 0.75rem 1rem;
+      background: #25D366;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-whatsapp:hover {
+      background: #1fb855;
+      transform: translateY(-1px);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      z-index: 90;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 22px rgba(37, 211, 102, 0.45);
+      transition: transform 0.2s var(--ease-out), box-shadow 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+    }
+    .whatsapp-float-label {
+      position: absolute;
+      right: calc(100% + 0.65rem);
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+      background: var(--slate);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 0.65rem;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .whatsapp-float:hover .whatsapp-float-label,
+    .whatsapp-float:focus-visible .whatsapp-float-label {
+      opacity: 1;
+    }
+    @media (max-width: 480px) {
+      .whatsapp-float-label { display: none; }
+      body { padding-bottom: 4.5rem; }
+    }
+
     @media (max-width: 900px) {
       .nav-toggle { display: block; }
       .nav-links {
@@ -928,6 +1013,10 @@
           <p class="sub fade-up d1">Dr. Harsh Unadkat combines advanced specialist training in endodontics with a calm, patient-centred approach — focused on saving your natural teeth with modern, comfortable techniques.</p>
           <div class="hero-ctas fade-up d2">
             <a href="#contact" class="btn-mint">Request Consultation</a>
+            <a href="#" class="btn-whatsapp-hero" data-whatsapp target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
             <a href="#speciality" class="btn-outline-light">Our Speciality</a>
           </div>
           <div class="stats-row fade-up d3">
@@ -1175,10 +1264,16 @@
               <dt>Hours</dt>
               <dd>Monday – Saturday<br />10:00 a.m. – 8:00 p.m.</dd>
               <dt>Phone</dt>
-              <dd><a href="tel:+919876543210">+91 98765 43210</a></dd>
+              <dd><a href="tel:+919820228905">+91 98202 28905</a></dd>
               <dt>Email</dt>
               <dd><a href="mailto:consult@drharshunadkat.com">consult@drharshunadkat.com</a></dd>
+              <dt>WhatsApp</dt>
+              <dd>Quick replies during clinic hours</dd>
             </dl>
+            <a href="#" class="btn-whatsapp" data-whatsapp target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Message on WhatsApp
+            </a>
           </div>
           <div class="contact-form-wrap">
             <form id="consultForm" novalidate action="https://api.web3forms.com/submit" method="POST">
@@ -1260,6 +1355,7 @@
           <li><a href="#why-specialist">Why a Specialist</a></li>
           <li><a href="#process">The Process</a></li>
           <li><a href="#contact">Book Consultation</a></li>
+          <li><a href="#" data-whatsapp target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         </ul>
       </div>
     </div>
@@ -1268,8 +1364,25 @@
     </div>
   </footer>
 
+  <a href="#" class="whatsapp-float" data-whatsapp target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-float-label">Chat with us</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
   <script>
     (function () {
+      var WHATSAPP_NUMBER = "919820228905";
+      var WHATSAPP_MESSAGE =
+        "Hello Dr. Harsh Unadkat Dentistry,\n\nI would like to request a consultation.\n\nMy concern: ";
+      var whatsappUrl =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(WHATSAPP_MESSAGE);
+      document.querySelectorAll("[data-whatsapp]").forEach(function (el) {
+        el.href = whatsappUrl;
+      });
+
       var header = document.querySelector(".site-header");
       var toggle = document.getElementById("navToggle");
       var nav = document.getElementById("primary-nav");
